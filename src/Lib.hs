@@ -2,5 +2,7 @@ module Lib
     ( someFunc
     ) where
 
+import           RocketLude
+
 someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+someFunc = putText "someFunc"
