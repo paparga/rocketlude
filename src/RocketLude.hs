@@ -5,7 +5,7 @@ module RocketLude
     , module RIO
     , module Data.Time.Calendar
     , module Data.Time.Clock
-    , getArgs
+    , getArgsT
     ) where
 
 import           Control.Lens ((^.), to, set, over, view)
@@ -19,5 +19,5 @@ import qualified Protolude as PL
 import qualified Data.Text as T
 
 -- | Same as 'getArgs' but with IO [Text] as output.
-getArgs :: IO [Text]
-getArgs = map T.pack <$> PL.getArgs
+getArgsT :: IO [Text]
+getArgsT = map T.pack <$> PL.getArgs
