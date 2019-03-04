@@ -1,5 +1,5 @@
 module RocketLude.ByteString.Lazy 
-    ( module RIO.ByteString.Lazy
+    ( module Data.ByteString.Lazy
     ) where
 
-import           RIO.ByteString.Lazy
+import           Data.ByteString.Lazy
