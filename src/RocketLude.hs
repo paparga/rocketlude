@@ -1,13 +1,20 @@
 module RocketLude
-    ( module Data.Aeson
-    , module Control.Lens
-    , module Protolude
-    , module RIO
+    ( 
+    -- ** Lenses
+      module Control.Lens
+    -- ** Aeson
+    , module Data.Aeson
+    -- ** Time.Calendar
     , module Data.Time.Calendar
+    -- ** Time.Clock
     , module Data.Time.Clock
-    , getArgsT
+    -- ** RIO
+    , module RIO
+    -- ** Protolude
+    , getArgsT 
+    , module Protolude
     ) where
-
+ 
 import           Control.Lens ((^.), to, set, over, view)
 import           RIO (RIO (..), MonadThrow(..), runRIO, liftRIO)
 import           Protolude  hiding (to, getArgs)

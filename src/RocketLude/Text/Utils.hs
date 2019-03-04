@@ -1,11 +1,16 @@
 module RocketLude.Text.Utils 
     ( simplifyText
     , findInText
+    , replace'
     ) where
 
 import RocketLude hiding (replace)
 import RocketLude.Text hiding (foldl)
 
+{-| Simplifies Texts for better text matching
+Removes tildes, spaces, dashes and end of lines
+Also changes the text to lowercase
+-}
 simplifyText :: Text -> Text
 simplifyText t = toLower $ replace' replacements t
 
@@ -16,14 +21,15 @@ replace'
     -> Text
 replace' c t = foldl (\acc (x,y) -> replace x y acc) t c
 
+-- | Searches for a text inside another, simplifies both with 'simplifyText' before searching
 findInText :: Text -> Text -> Bool
 findInText x y = isInfixOf (simplifyText x) $ simplifyText y
 
 replacements :: [(Text,Text)]
 replacements =
     [ ("\n"  , "" )
-    , (" usd", "" )
-    , (" clp", "" )
+    , (" "   , "" )
+    , ("-"   , "" )
     , ("\193", "a")
     , ("\201", "e")
     , ("\205", "i")

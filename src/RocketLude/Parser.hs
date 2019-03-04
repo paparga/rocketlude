@@ -1,3 +1,5 @@
+{- | * Parsing utilities for common Types -}
+
 module RocketLude.Parser 
     ( readInt
     , readInt'
@@ -9,7 +11,7 @@ import           Text.Read (readEither)
 import           RocketLude
 import           RocketLude.Text
 
--- | Reads Ints from Texts
+-- | Reads Ints from Texts. Maybe version of 'readInt''
 readInt :: Text -> Maybe Int 
 readInt t = case readInt' t of
     Left _  -> Nothing
@@ -21,6 +23,7 @@ readInt' t = case readEither $ unpack t of
     Left y  -> Left $ pack y
     Right z -> Right z
 
+-- | Reads Dates from Texts. Maybe version of 'readDate''
 readDate :: Text -> Maybe Day
 readDate t = case readDate' t of
     Left _  -> Nothing
