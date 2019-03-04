@@ -9,7 +9,11 @@ import RocketLude.Text hiding (foldl)
 simplifyText :: Text -> Text
 simplifyText t = toLower $ replace' replacements t
 
-replace' :: [(Text,Text)] -> Text  -> Text
+-- | Replaces subTexts with defined subTexts 
+replace' 
+    :: [(Text,Text)] -- ^ list of subText pairs to make replacement (toReplace,replacement)
+    -> Text  -- ^ Text to apply the transformation
+    -> Text
 replace' c t = foldl (\acc (x,y) -> replace x y acc) t c
 
 findInText :: Text -> Text -> Bool

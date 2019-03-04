@@ -36,7 +36,10 @@ library:
     - text
     - lens
     - rio
-    - temp-rio
+    - bytestring
+    - hashmap
+    - containers
+    - vector
 
 executables:
   rocketlude-exe:

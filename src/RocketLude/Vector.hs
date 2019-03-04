@@ -1,5 +1,5 @@
 module RocketLude.Vector 
-    ( module RIO.Vector
+    ( module Data.Vector
     ) where
 
-import           RIO.Vector
+import           Data.Vector

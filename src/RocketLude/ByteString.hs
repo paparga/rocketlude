@@ -1,5 +1,5 @@
 module RocketLude.ByteString 
-    ( module RIO.ByteString
+    ( module Data.ByteString
     ) where
 
-import           RIO.ByteString
+import           Data.ByteString

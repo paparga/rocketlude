@@ -1,5 +1,5 @@
 module RocketLude.Map
-    ( module RIO.Map
+    ( module Data.Map
     ) where
 
-import           RIO.Map
+import           Data.Map

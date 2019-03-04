@@ -1,5 +1,7 @@
 module RocketLude.Time 
-    ( module RIO.Time
+    ( module Data.Time
+    , module Data.Time.Clock
     ) where
 
-import           RIO.Time
+import           Data.Time
+import           Data.Time.Clock

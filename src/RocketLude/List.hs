@@ -1,5 +1,5 @@
 module RocketLude.List 
-    ( module RIO.List
+    ( module Data.List
     ) where
 
-import           RIO.List
+import           Data.List

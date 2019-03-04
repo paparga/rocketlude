@@ -1,5 +1,5 @@
 module RocketLude.HashMap 
-    ( module RIO.HashMap
+    ( module Data.HashMap
     ) where
 
-import           RIO.HashMap
+import           Data.HashMap
