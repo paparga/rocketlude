@@ -13,6 +13,8 @@ module RocketLude
     , module Data.Tagged
     -- ** RIO
     , module RIO
+    -- ** RIO.Orphans
+    , module RIO.Orphans
     -- ** Protolude
     , getArgsT 
     , toT
@@ -25,6 +27,7 @@ module RocketLude
  
 import           Control.Lens ((^.), to, set, over, view)
 import           RIO (RIO (..), MonadThrow(..), runRIO, liftRIO)
+import           RIO.Orphans
 import           Protolude  hiding (to, getArgs)
 import           Data.Aeson ((.:), Value(..), (.:?), (.!=), (.=), ToJSON(..), FromJSON(..))
 import           Data.Time.Calendar 

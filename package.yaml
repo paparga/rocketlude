@@ -36,6 +36,7 @@ library:
     - text
     - lens
     - rio
+    - rio-orphans
     - bytestring
     - hashmap
     - containers
