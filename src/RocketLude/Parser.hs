@@ -1,7 +1,9 @@
 {- | * Parsing utilities for common Types -}
 
 module RocketLude.Parser 
-    ( readInt
+    ( readDouble
+    , readDouble'
+    , readInt
     , readInt'
     , readDate
     , readDate'
