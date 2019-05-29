@@ -12,6 +12,18 @@ import           RocketLude
 import           RocketLude.Text
 
 -- | Reads Ints from Texts. Maybe version of 'readInt''
+readDouble :: Text -> Maybe Double 
+readDouble t = case readDouble' t of
+    Left _  -> Nothing
+    Right x -> Just x
+
+-- | Reads ints from texts, returns the int if succesful or the text if failed
+readDouble' :: Text -> Either Text Double
+readDouble' t = case readEither $ unpack t of 
+    Left y  -> Left $ pack y
+    Right z -> Right z
+
+-- | Reads Ints from Texts. Maybe version of 'readInt''
 readInt :: Text -> Maybe Int 
 readInt t = case readInt' t of
     Left _  -> Nothing
