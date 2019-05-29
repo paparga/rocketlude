@@ -11,13 +11,13 @@ import           Text.Read (readEither)
 import           RocketLude
 import           RocketLude.Text
 
--- | Reads Ints from Texts. Maybe version of 'readInt''
+-- | Reads Double from Texts. Maybe version of 'readDouble''
 readDouble :: Text -> Maybe Double 
 readDouble t = case readDouble' t of
     Left _  -> Nothing
     Right x -> Just x
 
--- | Reads ints from texts, returns the int if succesful or the text if failed
+-- | Reads Double from texts, returns the Double if succesful or the text if failed
 readDouble' :: Text -> Either Text Double
 readDouble' t = case readEither $ unpack t of 
     Left y  -> Left $ pack y
