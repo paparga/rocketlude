@@ -42,6 +42,8 @@ library:
     - containers
     - vector
     - tagged
+    - aeson-casing
+    - uuid
 
 tests:
   rocketlude-test:
