@@ -44,6 +44,7 @@ library:
     - tagged
     - aeson-casing
     - uuid
+    - async
 
 tests:
   rocketlude-test:
