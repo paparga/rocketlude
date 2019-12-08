@@ -33,9 +33,9 @@ library:
   dependencies:
     - time
     - aeson
-    - aeson-lens
     - text
     - lens
+    - lens-aeson
     - rio
     - rio-orphans
     - bytestring
