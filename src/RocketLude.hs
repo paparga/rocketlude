@@ -25,7 +25,7 @@ module RocketLude
     , module Protolude
     ) where
  
-import           Control.Lens ((^.), to, set, over, view)
+import           Control.Lens ((^.), (^..), (^?), to, set, over, view)
 import           RIO (RIO (..), MonadThrow(..), runRIO, liftRIO)
 import           RIO.Orphans
 import           Protolude  hiding (to, getArgs)

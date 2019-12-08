@@ -33,6 +33,7 @@ library:
   dependencies:
     - time
     - aeson
+    - aeson-lens
     - text
     - lens
     - rio
