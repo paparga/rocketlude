@@ -46,6 +46,8 @@ library:
     - aeson-casing
     - uuid
     - async
+    - lifted-async
+    - monad-control
 
 tests:
   rocketlude-test:
