@@ -1,6 +1,7 @@
 {-# LANGUAGE FlexibleContexts   #-}
 module RocketLude.Concurrent 
     ( batchConcurrent
+    , liftedBatchConcurrent
     ) where
 
 import           RocketLude
